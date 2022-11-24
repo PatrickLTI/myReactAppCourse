@@ -30,11 +30,9 @@ function DisplayMessage(props) {
 }
 
 function toggle(color) {
-  if (color === "blue") {
-    return "red";
-  } else {
-    return "blue";
-  }
+
+  return color === "blue" ?  "red":"blue";
+  
 }
 
 function Clock() {
@@ -51,7 +49,6 @@ function Clock() {
 
   return <p>React Clock: {time} </p>
 }
-
 
 function UserActions(props) {
 
