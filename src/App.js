@@ -5,15 +5,28 @@ import React from 'react';
 function App() {
   const [color, setColor] = React.useState("blue");
   const [count, setCount] = React.useState(0);
+  const [time, setTime] = React.useState(new Date().toLocaleTimeString());
 
-  console.log(color);
+
+
+  React.useEffect(() => {
+    sessionStorage.setItem('color', JSON.stringify(color));
+    localStorage.setItem('count', JSON.stringify(count));
+    const interval = setInterval(() => setTime(new Date().toLocaleTimeString(), 1000));
+    return () => { clearInterval(interval); }
+  }, [color, count]);
+
+
   return (
 
     <div>
 
       {/* This component has two children that display a message and a clock */}
       <DisplayMessage color={color} />
-      <Clock2 time={new Date().toLocaleTimeString()} />
+
+
+      <Clock2 time={time} />
+
       <p>Total count: {count} </p>
       <button onClick={() => { setColor(toggle(color)); setCount(count + 1) }}>
         Click me React To Change Colors
@@ -51,6 +64,8 @@ function toggle(color) {
 function Clock2(props) {
   return (<p> React Clock2: {props.time}</p>);
 }
+
+
 
 
 // setInterval(() => root.render(<Main />), 1000);
