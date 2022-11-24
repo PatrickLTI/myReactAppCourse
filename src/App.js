@@ -13,13 +13,13 @@ function App() {
   }, [color, count]);
 
   return (<div>
+    
     <DisplayMessage color={color} />
     <Clock />
-    <p>{count}</p>
+    <CounterDisplay count={count} />
     <UserActions setColor={setColor} setCount={setCount} count={count} color={color} />
 
   </div>
-
 
   );
 }
@@ -27,7 +27,6 @@ function DisplayMessage(props) {
   return <h1 style={{ color: props.color }}>Hello React World NEW Format</h1>;
 
 }
-
 
 function toggle(color) {
   if (color === "blue") {
@@ -62,6 +61,8 @@ function UserActions(props) {
   </button>
 }
 
-
-
+function CounterDisplay(props) {
+  return <p>{props.count}</p>;
+  }
+  
 export default App;
