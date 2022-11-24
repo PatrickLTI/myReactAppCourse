@@ -11,17 +11,13 @@ function App() {
     sessionStorage.setItem('color', JSON.stringify(color));
     localStorage.setItem('count', JSON.stringify(count));
   }, [color, count]);
-  
+
   return (<div>
     <DisplayMessage color={color} />
     <Clock />
     <p>{count}</p>
-    <button onClick={() => {
-      setColor(toggle(color));
-      setCount(count + 1)
-    }}>
-      Click me React
-    </button>
+    <UserActions setColor={setColor} setCount={setCount} count={count} color={color} />
+
   </div>
 
 
@@ -47,14 +43,25 @@ function Clock() {
 
   React.useEffect(() => {
     const interval = setInterval(
-      () => setTime(new Date().toLocaleTimeString()), 
+      () => setTime(new Date().toLocaleTimeString()),
       1000
-      );
-    return () =>  clearInterval(interval); 
+    );
+    return () => clearInterval(interval);
   }, [time]);
 
   return <p>React Clock: {time} </p>
 }
+
+
+function UserActions(props) {
+  return <button onClick={() => {
+    props.setColor(toggle(props.color));
+    props.setCount(props.count + 1)
+  }}>
+    Click me React
+  </button>
+}
+
 
 
 export default App;
