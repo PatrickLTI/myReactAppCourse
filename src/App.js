@@ -1,7 +1,7 @@
 
 import './App.css';
 
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 
 function App() {
 
@@ -54,16 +54,22 @@ function Clock() {
 
 
 function UserActions(props) {
-  return <button onClick={() => {
+
+  const handleOnClick = (props) => {
     props.setColor(toggle(props.color));
     props.setCount(props.count + 1)
-  }}>
+  }
+  return <button onClick=
+  {
+    handleOnClick
+  }>
     Click me React
   </button>
 }
 
+
 function CounterDisplay(props) {
   return <p>{props.count}</p>;
-  }
-  
+}
+
 export default App;
