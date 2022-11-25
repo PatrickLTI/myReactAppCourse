@@ -1,7 +1,10 @@
 
 import React from "react"
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import HomeButton from "../components/HomeButton";
+import { Link, NavLink } from "react-router-dom";
+
+
 
 function Header() {
     return (
@@ -10,9 +13,26 @@ function Header() {
                 <HomeButton />
             </div>
             <div>
-                <Link to="/">Visit Home</Link><br />
-                <Link to="/about">About</Link><br />
-                <Link to="/contact">Contact</Link>
+                <NavLink
+                    style={({ isActive }) =>
+                        isActive ? { color: "orange" } : { color: "blue" }
+                    }
+                    to="/"  >  Home
+                </NavLink><br/>
+
+                <NavLink
+                    style={({ isActive }) =>
+                        isActive ? { color: "orange" } : { color: "blue" }
+                    }
+                    to="/about"  >  About
+                </NavLink><br/>
+
+                <NavLink
+                    style={({ isActive }) =>
+                        isActive ? { color: "orange" } : { color: "blue" }
+                    }
+                    to="/contact"  >  Contact
+                </NavLink><br/>
             </div>
         </div >
 
