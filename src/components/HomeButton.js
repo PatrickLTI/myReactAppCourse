@@ -1,4 +1,7 @@
 import { useNavigate } from "react-router-dom";
+// import Button from 'react-bootstrap/Button';
+import Button from "@mui/material/Button";
+
 function HomeButton() {
     const navigate = useNavigate();
     const handleSubmit = (event) => {
@@ -10,7 +13,7 @@ function HomeButton() {
     };
     return (
         <div style={{ flexDirection: "row", direction: "rtl" }}>
-            <button onClick={handleSubmit}>Home</button>
+            <Button variant="outlined" onClick={handleSubmit}>Home</Button>
         </div>
     );
 }
