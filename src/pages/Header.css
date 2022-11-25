@@ -1,11 +1,11 @@
 /* Specific styles for non
 active links */
-.link inactive {
+.link-inactive {
     color: red;
 }
 
 /* Specific styles for active links */
-.link active {
+.link-active {
     color: black;
     background: orange;
 }

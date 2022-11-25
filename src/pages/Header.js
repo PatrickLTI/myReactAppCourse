@@ -3,6 +3,7 @@ import React from "react"
 // import { Link } from "react-router-dom";
 import HomeButton from "../components/HomeButton";
 import { Link, NavLink } from "react-router-dom";
+import "./Header.css";
 
 
 
@@ -14,25 +15,25 @@ function Header() {
             </div>
             <div>
                 <NavLink
-                    style={({ isActive }) =>
-                        isActive ? { color: "orange" } : { color: "blue" }
-                    }
-                    to="/"  >  Home
-                </NavLink><br/>
+                    className={({ isActive }) =>
+                        isActive ? "link-active" : "link-inactive"}
+                    to="/" > Home
+                </NavLink>
+                <br />
 
                 <NavLink
-                    style={({ isActive }) =>
-                        isActive ? { color: "orange" } : { color: "blue" }
-                    }
-                    to="/about"  >  About
-                </NavLink><br/>
+                    className={({ isActive }) =>
+                        isActive ? "link-active" : "link-inactive"}
+                    to="/about" > About
+                </NavLink>
+                <br />
 
                 <NavLink
-                    style={({ isActive }) =>
-                        isActive ? { color: "orange" } : { color: "blue" }
-                    }
-                    to="/contact"  >  Contact
-                </NavLink><br/>
+                    className={({ isActive }) =>
+                        isActive ? "link-active" : "link-inactive"}
+                    to="/contact" > Contact
+                </NavLink>
+                <br />
             </div>
         </div >
 
