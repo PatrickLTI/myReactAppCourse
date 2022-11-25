@@ -2,7 +2,7 @@
 import React from "react"
 // import { Link } from "react-router-dom";
 import HomeButton from "../components/HomeButton";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./Header.css";
 
 
