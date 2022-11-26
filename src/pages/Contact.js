@@ -1,6 +1,12 @@
+import HomeButton from "../components/HomeButton";
+import "../components/DisplayMessage.css";
+
 function Contact() {
     return (
-        <h1>This is the contact message</h1>
+        <div className="homeButton">
+            <HomeButton />
+            <h1>This is the Contact message.</h1>
+        </div>
     )
 }
 export default Contact;
