@@ -1,0 +1,36 @@
+/* Specific styles for non
+active links */
+.link-inactive {
+    color: rgb(8, 8, 8);
+}
+
+/* Specific styles for active links */
+.link-active {
+    color: black;
+    background: rgb(122, 159, 226);
+}
+
+.nav {
+    display: flex;
+    justify-content: end;
+    border-bottom: 2px solid black;
+    height: 50px;
+    margin: 5px;
+    background-color: lightgrey;
+    border-radius: 10px;
+    
+
+}
+
+.logo {
+    width: 100px;
+}
+
+.nav li {
+    padding: 20px;
+    list-style-type: none;
+}
+
+
+
+

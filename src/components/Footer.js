@@ -1,8 +1,12 @@
 import React from "react";
+import "./Footer.css";
 
-function Footer () {
-    return(
-    <small>All rights reserved. &copy; Copyright 2022</small>
+function Footer() {
+    return (
+        <div className="footer">
+            <small>All rights reserved. &copy; Copyright 2022</small>
+
+        </div>
     )
 }
 

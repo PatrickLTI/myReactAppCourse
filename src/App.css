@@ -32,7 +32,26 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+body {
+  background-color: rgb(149, 193, 221);
+}
+
+.mainContent {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+
 }

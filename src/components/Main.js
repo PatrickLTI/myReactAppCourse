@@ -14,7 +14,8 @@ function Main() {
     localStorage.setItem('count', JSON.stringify(count));
   }, [color, count]);
 
-  return (<div>
+  return (
+  <div>
 
     <DisplayMessage color={color} />
     <Clock />
