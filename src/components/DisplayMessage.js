@@ -10,7 +10,7 @@ export function DisplayMessage(props) {
       </div>
 
       <h1 style={{ color: props.color }}>
-        Hello React World NEW Format
+        Hello React World NEW Format TESTing
       </h1>
     </div>
   );
