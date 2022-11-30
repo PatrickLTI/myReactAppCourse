@@ -11,13 +11,13 @@ function Register() {
 }
 export default Register;
 
-function registering() {
+async function registering() {
 
     fetch("http://localhost:3001/users/register", {
         method: "POST",
         body: JSON.stringify({
-            username: "Benny2022",
-            password: "Rocks100@@",
+            username: "NEWBenny2022",
+            password: "Rocks100@@100",
         }),
         headers: {
             "Content-type": "application/json; charset=UTF-8",

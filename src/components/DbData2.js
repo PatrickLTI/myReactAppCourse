@@ -17,7 +17,7 @@ function callPostBody() {
         method: "POST",
         body: JSON.stringify({
             username: "John",
-            password: "The BRAN NEW WICK ",
+            password: "TheBRAN@@!10",
         }),
         headers: {
             "Content-type": "application/json; charset=UTF-8",

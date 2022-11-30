@@ -3,10 +3,16 @@ import React from "react"
 import HomeButton from "./HomeButton";
 import { NavLink } from "react-router-dom";
 import "./Header.css";
+import { LoggedInContext } from "../App";
+import LogoutButton from "./LogoutButton";
+
+
 
 
 
 function Header() {
+
+    const [isLoggedIn, setIsLoggedIn] = React.useContext(LoggedInContext);
 
     // const buttonStyle = {
     //     backgroundColor: "green",
@@ -20,7 +26,15 @@ function Header() {
     // };
 
     return (
+
+
         <div>
+
+            <div>
+                {isLoggedIn ? <LogoutButton /> : "Please login"}
+                <HomeButton />
+            </div>
+
             <div>
 
                 <ul className="nav">
