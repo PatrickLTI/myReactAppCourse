@@ -55,3 +55,35 @@ body {
   text-align: center;
 
 }
+
+.read--button {
+  margin: 10px;
+}
+
+.create--button {
+  margin: 10px;
+}
+
+.getquery--button {
+  margin: 10px;
+}
+
+.getpathquery--button {
+  margin: 10px;
+}
+
+.getpostquery--button {
+  margin: 10px;
+}
+
+.put--button {
+  margin: 10px;
+}
+
+.partial--button {
+  margin: 10px;
+}
+
+.error--button {
+  margin:10px;
+}
